@@ -12,6 +12,9 @@ body {
   /*border: 1px solid gray;*/
   margin: 10px;
   padding: 6px;
+  &:hover {
+    color: yellow;
+  }
 }
 
 #team-members .member img {
@@ -21,4 +24,11 @@ body {
 
 #team-members .member div.name {
   text-align: center;  
+}
+
+$primaryColor: #FF0000;
+body {
+  h1 {
+    color: $primaryColor;
+  }
 }
