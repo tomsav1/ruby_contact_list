@@ -22,3 +22,21 @@ body {
 
 body h1 {
   color: red; }
+
+.team {
+  background-color: pink;
+  display: inline-block;
+  position: relative; }
+  .team:hover .original {
+    opacity: 0; }
+  .team:hover .alternate {
+    opacity: 1; }
+  .team .alternate {
+    opacity: 0; }
+  .team img {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-transition: opacity 1s; }

@@ -32,3 +32,32 @@ body {
     color: $primaryColor;
   }
 }
+
+.team {
+
+  background-color: pink;
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    .original {
+      opacity: 0;
+    }
+    .alternate {
+      opacity: 1;
+    }
+  }
+
+  .alternate {
+    opacity: 0;
+  }
+
+  img {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-transition: opacity 1s;
+  }
+}
