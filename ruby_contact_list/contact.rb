@@ -2,7 +2,7 @@ class Contact
   attr_accessor :first_name
   attr_accessor :last_name
   attr_accessor :email
-  
+
   @@count = 0
   @@instances = []
 
@@ -40,8 +40,21 @@ class Contact
 
   def self.show_id(id)
   	if id < @@count
+
   		puts instances[id]
   	end
+  end
+
+  def self.change_first_name(id,first_name)
+  	instances[id].first_name = first_name
+  end
+  
+  def self.change_last_name(id,last_name)
+  	instances[id].last_name = last_name
+  end
+
+  def self.change_email(id,email)
+  	instances[id].email = email
   end
 
   def self.all

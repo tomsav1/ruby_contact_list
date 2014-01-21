@@ -42,12 +42,31 @@ class Application
         input = ""
       end
 
-     if input == "show"
+      if input == "show"
         #puts Contact.all
         #Contact.to_s
         puts "Which id?"
         id_selected = gets.chomp.to_i
         print Contact.show_id(id_selected)
+        puts "Do you want to edit this contact? y or n?"
+        if gets.chomp == "y"
+          puts "What do you want to edit? fname, lname, or email?"
+          choice = gets.chomp
+          case choice
+            when "fname"
+              puts "New first name?"
+              new_first_name = gets.chomp
+              Contact.change_first_name(id_selected,new_first_name)
+            when "lname"
+              puts "New last name?"
+              new_last_name = gets.chomp
+              Contact.change_last_name(id_selected,new_last_name)
+            when "email"
+              puts "New email?"
+              new_email = gets.chomp
+              Contact.change_email(id_selected,new_email)
+          end
+        end
         input = ""
       end
 
